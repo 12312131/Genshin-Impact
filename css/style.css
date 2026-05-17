@@ -305,6 +305,237 @@ a:hover {
   font-size: 0.9rem;
 }
 
+/* === Character Info Panel === */
+.char-panel {
+  background: linear-gradient(135deg, #1a1a2e 0%, #1e1e36 100%);
+  border: 1px solid #2a2a3e;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.char-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+.char-icon.geo  { background: linear-gradient(135deg, #6b5b30, #9a7b3a); color: #f0d080; }
+.char-icon.pyro { background: linear-gradient(135deg, #6b2020, #9a3030); color: #f08060; }
+.char-icon.cryo { background: linear-gradient(135deg, #2a4a6b, #3a6a9a); color: #a0d8f0); }
+.char-icon.hydro{ background: linear-gradient(135deg, #1a3a6b, #2a5a9a); color: #80c8f0); }
+
+.char-stars {
+  color: #d4a574;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.25rem;
+}
+
+.char-name-badge {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #e0dcd0;
+  margin-bottom: 0.25rem;
+}
+
+.char-subtitle {
+  font-size: 0.85rem;
+  color: #8a8a9e;
+  margin-bottom: 0.6rem;
+}
+
+.char-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.char-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.7rem;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.char-tag.element-geo  { background: rgba(240, 208, 128, 0.15); color: #f0d080; }
+.char-tag.element-pyro { background: rgba(240, 128, 96, 0.15);  color: #f08060; }
+.char-tag.element-cryo { background: rgba(160, 216, 240, 0.15); color: #a0d8f0; }
+.char-tag.weapon       { background: rgba(180, 160, 140, 0.12); color: #b4a08c; }
+.char-tag.role         { background: rgba(160, 200, 140, 0.14); color: #a0c88c; }
+
+/* === Stat Priority Table === */
+.stat-table-wrap {
+  margin: 1.5rem 0;
+  overflow-x: auto;
+}
+
+.stat-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.stat-table thead th {
+  background: #1a1a2e;
+  color: #d4a574;
+  font-weight: 700;
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #3a3a4e;
+}
+
+.stat-table tbody td {
+  padding: 0.55rem 0.8rem;
+  border-bottom: 1px solid #1a1a2e;
+  color: #c0b8a8;
+}
+
+.stat-table tbody tr:nth-child(even) td {
+  background: rgba(26, 26, 46, 0.4);
+}
+
+.stat-table .stat-priority {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin-right: 0.4rem;
+}
+
+.stat-table .prio-1 { background: #d4a574; color: #1a1a2e; }
+.stat-table .prio-2 { background: #a0a0a0; color: #1a1a2e; }
+.stat-table .prio-3 { background: #8a6a4a; color: #e0dcd0; }
+.stat-table .prio-4 { background: #5a5a5a; color: #c0b8a8; }
+
+/* === Weapon Compare Card === */
+.weapon-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.weapon-card {
+  background: #1a1a2e;
+  border: 1px solid #2a2a3e;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.weapon-card.premium {
+  border-color: rgba(212, 167, 116, 0.3);
+  background: linear-gradient(135deg, #1e1a26 0%, #1a1a2e 100%);
+}
+
+.weapon-card .w-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.weapon-card.premium .w-label { color: #d4a574; }
+.weapon-card.f2p .w-label     { color: #7ec99e; }
+
+.weapon-card .w-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #e0dcd0;
+  margin-bottom: 0.4rem;
+}
+
+.weapon-card .w-sub {
+  font-size: 0.82rem;
+  color: #8a8a9e;
+  line-height: 1.4;
+}
+
+/* === Divider === */
+.section-divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #2a2a3e, transparent);
+  margin: 2rem 0;
+}
+
+/* === Team Comp Visual === */
+.team-row {
+  display: flex;
+  gap: 0.6rem;
+  margin: 0.75rem 0;
+  flex-wrap: wrap;
+}
+
+.team-slot {
+  background: #1a1a2e;
+  border: 1px solid #2a2a3e;
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+  text-align: center;
+  min-width: 80px;
+}
+
+.team-slot .ts-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #e0dcd0;
+}
+
+.team-slot .ts-role {
+  font-size: 0.7rem;
+  color: #8a8a9e;
+  margin-top: 0.15rem;
+}
+
+.team-slot.highlight {
+  border-color: rgba(212, 167, 116, 0.3);
+  background: #1e1a26;
+}
+
+/* === Mobile tweaks for new elements === */
+@media (max-width: 768px) {
+  .char-panel {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .char-icon {
+    margin: 0 auto;
+  }
+
+  .char-tags {
+    justify-content: center;
+  }
+
+  .weapon-compare {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* === Utility === */
 .tag-build    { color: #7eb8da; }
 .tag-meta     { color: #c98bdb; }
